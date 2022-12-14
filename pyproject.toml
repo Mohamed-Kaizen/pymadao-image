@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "madao-image"
+version = "0.1.0"
+description = ""
+authors = ["Mohamed-Kaizen <m.n.kaizen@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "madao_image"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+orjson = "^3.8.3"
+pillow = "^9.3.0"
+python-multipart = "^0.0.5"
+blurhash = "^1.1.4"
+numpy = "^1.23.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+darglint = "^1.8.1"
+flake8 = "^6.0.0"
+flake8-annotations = "^2.9.1"
+flake8-bandit = "^4.1.1"
+flake8-black = "^0.3.5"
+flake8-bugbear = "^22.12.6"
+flake8-docstrings = "^1.6.0"
+flake8-import-order = "^0.18.2"
+isort = "^5.11.2"
+radon = "^5.1.0"
+mypy = "^0.991"
+
+[tool.isort]
+profile="black"
+
+[tool.mypy]
+strict = true
+warn_unreachable = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
